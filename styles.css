@@ -1,7 +1,7 @@
 :root {
   /* Colors */
-  --bg-cream: #FFF9C4;
-  /* Amarelo mais vibrante e suave (Cream Yellow) */
+  --bg-cream: #FFE794;
+  /* Amarelo mais vibrante (Vibrant Yellow) */
   --bg-white: #FFFFFF;
 
   /* Text Colors */
@@ -761,5 +761,64 @@ details[open] summary::after {
   .carousel-button {
     font-size: 1.5rem;
     padding: 5px;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* MOBILE REFINEMENTS AND SPECIFIC USER REQUESTS                      */
+/* ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+
+  /* 4.3 Sessão da HEADLINE (MOBILE) */
+  .hero-card h1 {
+    font-size: 1.4rem !important;
+    /* Reduced font size ~22-24px */
+    max-width: 100% !important;
+    /* Allow full width */
+    margin: 0 auto;
+    line-height: 1.3;
+  }
+
+  .hero-card p {
+    margin-top: 1.5rem !important;
+    /* Spacing between headline and subheadline */
+    margin-bottom: 2rem !important;
+    /* Spacing between subheadline and content */
+    font-size: 1.1rem;
+  }
+
+
+  /* 4.2 Sessão “Apresento a Abordagem de 75 Segundos do Pobre Esperto” (MOBILE) */
+  /* This text is usually in a card with h2 "Apresento a Abordagem..." */
+  /* We can target the section or card specifically if needed. */
+  .card p {
+    margin-bottom: 2rem !important;
+    /* Include more breathing room */
+    line-height: 1.8 !important;
+    /* More comfortable reading */
+  }
+
+  /* 4.1 Sessão de BÔNUS (MOBILE) */
+  .bonus-item {
+    margin-bottom: 2rem !important;
+    /* Maior margem entre cards */
+    padding: 2rem !important;
+    /* Maior espaçamento interno */
+  }
+
+  .bonus-item p {
+    line-height: 1.7 !important;
+    margin-top: 1rem !important;
+    /* Space between Title and Text */
+  }
+
+  /* 4.4 Demais textos no MOBILE – Respiração */
+  p {
+    line-height: 1.75 !important;
+  }
+
+  /* Ensure container padding is good */
+  .container {
+    padding: 0 1.25rem;
   }
 }
