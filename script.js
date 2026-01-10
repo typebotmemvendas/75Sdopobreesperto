@@ -10,16 +10,22 @@ document.addEventListener('DOMContentLoaded', function () {
     startTimer(duration, displayElements);
 
     // Carousel Logic
-    const track = document.querySelector('.carousel-track');
-    // If carousel exists on page
-    if (track) {
+    // Generic Carousel Logic for Multiple Carousels
+    const carouselContainers = document.querySelectorAll('.carousel-container');
+
+    carouselContainers.forEach(container => {
+        const track = container.querySelector('.carousel-track');
+        if (!track) return;
+
         const slides = Array.from(track.children);
-        const nextButton = document.querySelector('.carousel-button--right');
-        const prevButton = document.querySelector('.carousel-button--left');
-        const dotsNav = document.querySelector('.carousel-nav');
+        const nextButton = container.querySelector('.carousel-button--right');
+        const prevButton = container.querySelector('.carousel-button--left');
+        const dotsNav = container.querySelector('.carousel-nav');
         const dots = Array.from(dotsNav.children);
 
-        // Let's use simple translateX logic
+        // Current state per carousel
+        let currentSlideIndex = 0;
+
         const updateSlidePosition = (index) => {
             const width = track.getBoundingClientRect().width;
             track.style.transform = 'translateX(-' + (width * index) + 'px)';
@@ -31,25 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
             dots[index].classList.add('current-slide');
         };
 
-        // Window resize adjustment
-        window.addEventListener('resize', () => {
-            // Re-align current slide
-            const currentSlide = track.querySelector('.current-slide');
-            // If found, use it, else default to 0
-            let currentIndex = 0;
-            if (currentSlide) {
-                currentIndex = slides.findIndex(slide => slide === currentSlide);
-            }
-            if (currentIndex === -1) currentIndex = 0;
-
-            updateSlidePosition(currentIndex);
-        });
-
-        // Current state
-        let currentSlideIndex = 0;
-
         // Button Listeners
-        nextButton.addEventListener('click', e => {
+        nextButton.addEventListener('click', () => {
             currentSlideIndex++;
             if (currentSlideIndex >= slides.length) {
                 currentSlideIndex = 0; // Loop back
@@ -57,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
             updateSlidePosition(currentSlideIndex);
         });
 
-        prevButton.addEventListener('click', e => {
+        prevButton.addEventListener('click', () => {
             currentSlideIndex--;
             if (currentSlideIndex < 0) {
                 currentSlideIndex = slides.length - 1; // Loop to end
@@ -74,7 +63,12 @@ document.addEventListener('DOMContentLoaded', function () {
             currentSlideIndex = targetIndex;
             updateSlidePosition(currentSlideIndex);
         });
-    }
+
+        // Window resize adjustment specific to this carousel
+        window.addEventListener('resize', () => {
+            updateSlidePosition(currentSlideIndex);
+        });
+    });
 });
 
 function startTimer(duration, displayElements) {
