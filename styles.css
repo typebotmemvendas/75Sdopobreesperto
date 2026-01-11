@@ -821,4 +821,9 @@ details[open] summary::after {
   .container {
     padding: 0 1.25rem;
   }
+
+  /* Hide Urgency/Promo text on mobile */
+  .urgency-block {
+    display: none !important;
+  }
 }
