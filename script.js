@@ -65,6 +65,30 @@ carouselContainers.forEach(container => {
     window.addEventListener('resize', () => {
         updateSlidePosition(currentSlideIndex);
     });
+
+    // Touch / Swipe Support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleGesture();
+    }, { passive: true });
+
+    const handleGesture = () => {
+        if (touchEndX < touchStartX - 50) {
+            // Swipe Left -> Next Slide
+            nextButton.click();
+        }
+        if (touchEndX > touchStartX + 50) {
+            // Swipe Right -> Prev Slide
+            prevButton.click();
+        }
+    };
 });
 });
 

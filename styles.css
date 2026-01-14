@@ -611,11 +611,19 @@ details[open] summary::after {
 }
 
 @media(max-width:768px) {
+
+  /* Mais espaço lateral no mobile */
+  .container {
+    padding: 0 1rem;
+  }
+
   .hero-card h1 {
-    font-size: 1.4rem !important;
+    font-size: 1.3rem !important;
+    /* ~23px */
     max-width: 100% !important;
     margin: 0 auto;
-    line-height: 1.3
+    line-height: 1.25;
+    /* Mais compacto */
   }
 
   .hero-card p {
