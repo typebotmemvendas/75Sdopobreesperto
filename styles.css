@@ -600,6 +600,11 @@ details[open] summary::after {
     height: 400px
   }
 
+  /* Aumentar imagem resultados mobile */
+  .results-carousel-mobile-adjust .carousel-track-container {
+    height: 550px !important;
+  }
+
   .carousel-container {
     padding: 1.5rem 0.5rem
   }
