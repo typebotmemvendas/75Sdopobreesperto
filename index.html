@@ -626,13 +626,17 @@
                 padding: 0 1rem;
             }
 
+            .hero-card {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
             .hero-card h1 {
                 font-size: 1.3rem !important;
-                /* ~23px */
                 max-width: 100% !important;
                 margin: 0 auto;
-                line-height: 1.25;
-                /* Mais compacto */
+                line-height: 1.35;
+                letter-spacing: normal;
             }
 
             .hero-card p {
@@ -663,6 +667,11 @@
             .urgency-block {
                 display: none !important;
             }
+        }
+
+        .subheadline-emphasis {
+            font-weight: 700;
+            font-size: 1.1em;
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -697,9 +706,11 @@
         <div class="container">
             <div class="card hero-card">
 
-                <h1 style="color: #4A2E1F;">A <em>"Abordagem do Pobre Esperto"</em> para colocar até <span
-                        class="text-green">R$300,00 Reais</span> a mais no seu bolso dentro de <span
-                        class="text-green">4 Horas</span> vendendo doces, mesmo se você for tímido.</h1>
+                <h1 style="color: #4A2E1F;">
+                    Use essa <em>Abordagem do Pobre Esperto</em> pra Você <span class="text-green">Parar de Ouvir
+                        "Não"</span> e Começar a <span class="text-green">Vender Até R$300,00 Reais a Mais</span> em
+                    <span class="text-green">4 horas</span> com Doces.
+                </h1>
 
                 <!-- MINI VSL -->
                 <div class="card"
@@ -746,8 +757,9 @@
                     </script>
                 </div>
 
-                <p style="color: var(--text-body); font-weight: 400; margin-top: 1.5rem;">É só copiar, adaptar pro seu
-                    doce e vender, <span class="text-bold">sem virar vendedor chato.</span></p>
+                <p style="color: var(--text-body); font-weight: 600; margin-top: 1.5rem;">É só cópiar o Único Script,
+                    adaptar pro seu doce e Começar a <span class="text-bold" style="font-weight: 800;">Vender Com mais
+                        Confiança, sem virar vendedor chato.</span></p>
 
                 <div class="hero-image-container">
                     <!-- Imagem removida conforme solicitado -->
@@ -1663,7 +1675,7 @@
                 !function (f, b, e, v, n, t, s) {
                     if (f.fbq) return; n = f.fbq = function () {
                         n.callMethod ?
-                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
                     };
                     if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
                     n.queue = []; t = b.createElement(e); t.async = !0;
