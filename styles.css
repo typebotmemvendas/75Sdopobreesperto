@@ -1465,4 +1465,8 @@ details[open] summary::after {
   .urgency-block {
     display: none !important;
   }
+
+  .hero-subheadline {
+    font-size: 1rem !important;
+  }
 }
