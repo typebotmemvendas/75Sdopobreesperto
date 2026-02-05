@@ -1470,3 +1470,14 @@ details[open] summary::after {
     font-size: 1rem !important;
   }
 }
+
+/* Adjustments for Testimonial Videos on Mobile */
+@media (max-width: 768px) {
+  .testimonial-video-container {
+    padding: 0.5rem !important;
+  }
+
+  .video-spacer {
+    margin-top: 5rem !important;
+  }
+}
