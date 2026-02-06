@@ -707,8 +707,8 @@
             <div class="card hero-card">
 
                 <h1 style="color: #4A2E1F; margin-bottom: 2rem; font-size: 2.15rem;">
-                    Como Vendedores Tímidos de Doces Estão Lucrando <span class="text-green">R$300 a Mais Por Dia</span>
-                    Usando Um Script de <span class="text-green">75 Segundos</span> (Sem Parecer Vendedor Chato)
+                    O <span class="text-green">Script De 75 Segundos</span> Que Elimina A Vergonha de Abordar E <span
+                        class="text-green">Torna Seu Doce Impossível de Ser Ignorado</span> (Sem Virar Vendedor Chato).
                 </h1>
 
                 <p class="hero-subheadline"
@@ -716,51 +716,11 @@
                     O Script Testado em 4 Anos de Rua Que Transforma a Rejeição do 'Não, Obrigado' em <span
                         class="text-bold">'Me Dá Dois Desse Sabor'</span> em Menos de 75 Segundos
                 </p>
+                <p class="hero-subheadline" style="font-size: 1.15rem; margin-top: -1.5rem; margin-bottom: 2.5rem;">
+                    Restaure o orgulho que sua familia merece ver em você como provedor(a) de casa.
+                </p>
 
-                <!-- MINI VSL -->
-                <div class="card"
-                    style="margin-top: 1.5rem; padding: 1rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 800px; margin-left: auto; margin-right: auto;">
-                    <div id="vsl-wrapper" style="position: relative; width: 100%; padding-top: 177.78%;">
-                        <div id="vsl-facade"
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; overflow: hidden; border-radius: 8px;">
-                            <img src="assets/thumbmail-minivsl.webp2.webp" alt="Assistir Vídeo" fetchpriority="high"
-                                decoding="async" loading="eager"
-                                style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                            <div
-                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(255, 107, 0, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4); transition: transform 0.2s ease;">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="white"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5V19L19 12L8 5Z" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
 
-                    <script>
-                        document.getElementById('vsl-facade').addEventListener('click', function () {
-                            var wrapper = document.getElementById('vsl-wrapper');
-
-                            // 1. Inject Wistia Scripts
-                            if (!document.getElementById('wistia-player-js')) {
-                                var script1 = document.createElement('script');
-                                script1.src = "https://fast.wistia.com/player.js";
-                                script1.async = true;
-                                script1.id = 'wistia-player-js';
-                                document.head.appendChild(script1);
-
-                                var script2 = document.createElement('script');
-                                script2.src = "https://fast.wistia.com/embed/n2c35ipjrg.js";
-                                script2.async = true;
-                                script2.type = "module";
-                                document.head.appendChild(script2);
-                            }
-
-                            // 2. Replace Facade with Player
-                            // We set aspect to null or auto in style because the wrapper handles the ratio
-                            wrapper.innerHTML = '<wistia-player media-id="n2c35ipjrg" aspect="0.5625" autoplay="true" style="width:100%; height:100%; position:absolute; top:0; left:0;"></wistia-player>';
-                        });
-                    </script>
-                </div>
 
 
 
@@ -773,60 +733,73 @@
     </section>
 
     <!-- DORES (PAIN POINTS) -->
-    <section class="bg-white">
+    <section id="pain-section" class="bg-white">
+        <style>
+            @media (max-width: 768px) {
+                #pain-section .check-list li {
+                    margin-bottom: 2rem;
+                    /* Increased spacing on mobile */
+                }
+
+                #pain-section p {
+                    margin-top: 2rem !important;
+                    /* Increased spacing on mobile */
+                    margin-bottom: 2rem !important;
+                }
+            }
+        </style>
         <div class="container">
             <div class="card">
-                <h2 class="text-center">VOCÊ SE VÊ NESSA SITUAÇÃO?</h2>
+                <h2 class="text-center" style="color: #3E2723;">POR ACASO VOCÊ…</h2>
                 <ul class="check-list">
-                    <li>Você sai com a bandeja cheia e volta com metade sobrando?</li>
-                    <li>Passa gente na sua frente e você trava?</li>
-                    <li>Não sabe como lidar com o "Não"?</li>
-                    <li>No fim do dia, volta pra casa frustrado e desanimado e até pensa em desistir?</li>
+                    <li>Tem medo de abordar desconhecidos na rua e se sente incapaz?</li>
+                    <li>Sente seu alcance e renda limitado por não saber abordar novos clientes?</li>
+                    <li>Depende de pedidos esporádicos de conhecidos em vez de ter renda previsíveis com os doce?</li>
+                    <li>As vezes desanima do sonho de vender doces, e até pensa em desistir?</li>
                 </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- VIRADA DE CHAVE -->
-    <section class="bg-cream">
-        <div class="container">
-            <div class="card text-center">
-                <h2 class="text-center">NÃO É DOM, É TÉCNICA</h2>
-                <!-- Texto dividido em parágrafos nos "..." e com destaques -->
-                <p style="margin-bottom: 1.5rem;">O problema não é você. É a forma como você chega.</p>
-                <p>Nos últimos 4 anos vendendo doces na rua, descobri que <strong>75 segundos de conversa certa</strong>
-                    transformam um <span style="color: #D32F2F; font-weight: bold;">'não automático'</span> em
-                    <strong>'me dá dois desse sabor'.</strong>
+                <p class="text-center" style="margin-top: 1.5rem; font-weight: 500;">
+                    Se sim, <strong style="color: #3E2723;">o problema não é você ou incompetência.</strong>
+                </p>
+                <p class="text-center" style="font-weight: 500;">
+                    É falta de uma estratégia de abordagem de doces <strong style="color: #3E2723;">simples e segura que
+                        nunca te ensinaram.</strong>
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- APRESENTAÇÃO DO MÉTODO -->
-    <section class="bg-white">
+    <!-- VIRADA DE CHAVE REMOVIDA -->
+
+
+
+
+
+    <!-- NOVA SESSÃO: NÃO É TALENTO -->
+    <section class="bg-cream">
         <div class="container text-center">
             <div class="card">
-                <h2>Apresento a Abordagem de 75 Segundos do Pobre Esperto</h2>
-                <p><strong><em>Esse é o Único Script de</em></strong> abordagem feita especialmente para <span
-                        class="text-bold">vendedores tímidos de doces
-                        na rua</span>, que se sentem
-                    inseguros e frustrados de ouvir 'Não' quase o tempo todo.</p>
-                <p>Com a Abordagem você vai aumentar a quantidade de pessoas valorizando seu doce e conseguir lucrar de
-                    <span class="text-green">R$150 a R$300,00</span> a mais em até <span class="text-green">4
-                        horas</span>, sem virar 'vendedor chato'.
+                <h2 style="color: #3E2723; text-transform: uppercase;">NÃO É TALENTO PRA VENDER. É TÉCNICA</h2>
+                <p style="color: #3E2723; margin-bottom: 0;">
+                    Nos últimos 4 anos vendendo doces na rua, descobri que <strong style="color: #3E2723;">75 segundos
+                        de conversa certa</strong> transformam um <strong style="color: #D32F2F;">'não
+                        automático'</strong> em <strong style="color: #3E2723;">'me dá dois desse sabor'.</strong>
                 </p>
-
-                <span class="btn-subtext">Acesso Imediato e Seguro</span>
             </div>
         </div>
     </section>
-
-    <!-- POR QUE FUNCIONA (NOVA SESSAO) -->
-    <section style="background-color: var(--green-cta); padding: 3rem 0;">
+    <section id="how-it-works-section" style="background-color: var(--green-cta); padding: 3rem 0;">
+        <style>
+            @media (max-width: 768px) {
+                #how-it-works-section {
+                    margin-top: 3rem;
+                    /* Extra spacing on mobile */
+                }
+            }
+        </style>
         <div class="container">
             <div class="card text-center" style="padding: 3rem 1.5rem;">
-                <h2 style="color: #4A2E1F; margin-bottom: 2rem;">TÁ BOM, MAS COMO A ABORDAGEM DE 75 SEGUNDOS DO POBRE
-                    ESPERTO FUNCIONA?</h2>
+                <h2 style="color: #4A2E1F; margin-bottom: 2rem;">TÁ BOM, MAS COMO ESSA
+                    ABORDAGEM AÍ FUNCIONA?</h2>
 
                 <div style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem auto;">
                     <p style="margin-bottom: 1.5rem;">Funciona assim: você chega como um <strong
@@ -837,7 +810,8 @@
                         a guarda, presta atenção e quer o doce <strong class="text-green">antes mesmo de você falar o
                             preço</strong>.</p>
 
-                    <p>E por isso, se você ainda não vender, sai respeitado entre as pessoas.</p>
+                    <p>E por isso, se você ainda não vender, <strong style="color: #3E2723;">sai respeitado entre as
+                            pessoas.</strong></p>
                 </div>
             </div>
         </div>
@@ -846,13 +820,7 @@
     <!-- O QUE VOCÊ VAI ENCONTRAR (MÓDULOS) - REDESIGN CARDS -->
     <section class="bg-cream">
         <div class="container">
-            <h2 class="text-center">O QUE VOCÊ VAI ENCONTRAR DENTRO DA ABORDAGEM DO POBRE ESPERTO?</h2>
-
-            <div style="text-align: center; color: var(--text-body); margin-bottom: 3rem;">
-                <p>Você recebe via PDF o Script da Abordagem até a Venda, que pode ser lido e aplicado na próxima hora.
-                </p>
-                <p>O script está dividido em 5 etapas sequenciais que você segue como uma receita de bolo.</p>
-            </div>
+            <h2 class="text-center">O QUE VOCÊ VAI DOMINAR ATRAVÉS DO SCRIPT?</h2>
 
             <div class="grid-cards">
 
@@ -865,7 +833,7 @@
                                 d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                         </svg>
                     </div>
-                    <h3 class="card-title">Etapa 1 - Arsenal Abre-Portas</h3>
+                    <h3 class="card-title">Arsenal Abre-Portas</h3>
 
                     <p>A frase que faz a pessoa parar nos primeiros 5 segundos... em vez de te ignorar ou de te dizer só
                         'não, obrigado'.</p>
@@ -880,7 +848,7 @@
                                 d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z" />
                         </svg>
                     </div>
-                    <h3 class="card-title">Etapa 2 - Conexão Doce Instantânea</h3>
+                    <h3 class="card-title">Conexão Doce Instantânea</h3>
 
                     <p>Como criar conexão em 15 segundos, fazendo você parecer uma pessoa conhecida oferecendo algo
                         gostoso.</p>
@@ -895,7 +863,7 @@
                                 d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z" />
                         </svg>
                     </div>
-                    <h3 class="card-title">Etapa 3 - Experiência em 3D</h3>
+                    <h3 class="card-title">Experiência em 3D</h3>
 
                     <p>Momento de Você Transformar seu doce em rápida experiência viva na mente do cliente, de forma que
                         ele <strong class="text-bold">veja valor no seu doce</strong>, sem forçar nada.</p>
@@ -910,7 +878,7 @@
                                 d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z" />
                         </svg>
                     </div>
-                    <h3 class="card-title">Etapa 4 - Multiplicador de Bandeja</h3>
+                    <h3 class="card-title">Multiplicador de Bandeja</h3>
 
                     <p>Aprenda a Aumentar a venda de R$10 para R$30-60 por cliente sem empurrar</p>
                 </div>
@@ -923,7 +891,7 @@
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                         </svg>
                     </div>
-                    <h3 class="card-title">Etapa 5 - Fechamento Açucarado</h3>
+                    <h3 class="card-title">Fechamento Açucarado</h3>
 
                     <p>Palavra por Palavra para você Passar o preço sem medo e transformar interesse em dinheiro na mão
                     </p>
@@ -940,8 +908,72 @@
         </div>
     </section>
 
+    <!-- NOVA SESSÃO: O QUE VOCÊ VAI RECEBER -->
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">O QUE VOCÊ VAI RECEBER AO SE INSCREVER?</h2>
+
+            <div class="new-offer-grid" style="display: grid; gap: 2rem;">
+                <style>
+                    .new-offer-grid {
+                        grid-template-columns: 1fr;
+                    }
+
+                    @media(min-width: 900px) {
+                        .new-offer-grid {
+                            grid-template-columns: repeat(3, 1fr);
+                        }
+                    }
+                </style>
+
+                <!-- CARD 1 -->
+                <div class="card"
+                    style="margin-bottom: 0; padding: 2rem; display:flex; flex-direction:column; align-items:center; text-align:center;">
+                    <div class="card-icon-container" style="flex-shrink: 0;">
+                        <!-- Icon: Script/Book -->
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                            <path
+                                d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 1rem;">O SCRIPT DA ABORDAGEM:</h3>
+                    <p style="font-size: 1rem; margin-bottom: 0;">
+                        Você recebe via E-book o Script da Abordagem até a Venda, que pode ser lido e aplicado na
+                        próxima hora.
+                    </p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card"
+                    style="margin-bottom: 0; padding: 2rem; display:flex; flex-direction:column; align-items:center; text-align:center;">
+                    <div class="card-icon-container" style="flex-shrink: 0;">
+                        <!-- Icon: Support/User -->
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                            <path
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 1rem;">SUPORTE COMIGO DURANTE 14 DIAS</h3>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card"
+                    style="margin-bottom: 0; padding: 2rem; display:flex; flex-direction:column; align-items:center; text-align:center;">
+                    <div class="card-icon-container" style="flex-shrink: 0;">
+                        <!-- Icon: Bonus/Star -->
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 1rem;">4 BÔNUS VIP</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- NOVA SESSÃO DE DEPOIMENTOS (CARROSSEL) -->
-    <section style="background-color: var(--bg-cream); padding-top: 0;">
+    <section style="background-color: var(--bg-cream); padding-top: 3rem;">
         <div class="container text-center">
             <h2
                 style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #3E2723; font-size: 1.75rem; margin-bottom: 2rem;">
@@ -1106,7 +1138,7 @@
 
                 <div class="price-box">
                     <p>Apenas Agora na Oferta de Pré Lançamento:</p>
-                    <div class="old-price">De R$ 97,00</div>
+                    <div class="old-price" style="font-size: 1.4rem;">De R$ 97,00</div>
                     <div class="new-price">Por <span class="text-green">R$ 29,90</span></div>
                     <p>(Investimento único)</p>
                     <p style="font-size: 0.9rem; margin-top: 0.5rem;"><em>Menos que um lanche na rua!</em></p>
@@ -1241,23 +1273,7 @@
                 </p>
             </div>
 
-            <div class="bonus-item">
-                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-                    <div class="bonus-icon"
-                        style="background: #e8f5e9; border-radius: 50%; padding: 4px; margin-right: 8px; display: inline-flex;">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                            fill="#2E7D32">
-                            <path d="M0 0h24v24H0V0z" fill="none" />
-                            <path
-                                d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-                        </svg>
-                    </div>
-                    <strong style="font-size: 1.1rem; color: #2E7D32;">Manual de respostas Vapt Vupt</strong>
-                </div>
-                <p style="margin-bottom: 0;">
-                    para as 5 situações inesperadas na rua. Você nunca mais vai ficar sem resposta na frente do cliente.
-                </p>
-            </div>
+
 
             <div class="text-center"
                 style="margin-top: 2rem; padding: 1rem; border: 2px dashed var(--green-cta); border-radius: 8px;">
@@ -1295,7 +1311,7 @@
                         </li>
                         <li><strong>Bônus</strong> 4: Mentalidade pra Destravar a Timidez</li>
                         <li><strong>Bônus</strong> 5: Suporte via e-mail comigo por 14 dias</li>
-                        <li><strong>Bônus</strong> 6: Manual de Resposta Vapt-Vupt</li>
+
                     </ul>
                 </div>
 
@@ -1309,7 +1325,7 @@
                     </div>
 
                     <div style="font-size: 1.2rem; margin: 1.5rem 0;">
-                        De R$ 97 por <strong
+                        De <span style="font-size: 1.4rem; text-decoration: line-through;">R$ 97,00</span> por <strong
                             style="font-size: 2.5rem; color: var(--green-cta); display: block; margin-top: 0.5rem;">29,90
                             reais</strong>
                     </div>
@@ -1346,50 +1362,51 @@
                 <details>
                     <summary>O que é a abordagem de 75s do Pobre Esperto?</summary>
                     <div class="faq-content">
-                        <p><span class="text-bold">Uma Script de Abordagem simples,</span> que dura cerca de 75
-                            segundos, pra você pegar, adaptar pro seu doce e usar no dia a dia pra lucrar Até <span
-                                class="text-green">R$300,00</span> A Mais Dentro de <span class="text-green">4
-                                Horas</span>, sem parecer vendedor chato.</p>
-                        <p><span class="text-bold">Abordagem testada e aprimorada durante 4 anos de vendas de
-                                doces,</span> seja na rua, em parque e usando com parentes. Serve mesmo para
-                            tímidos.<br>
-                            Além da abordagem, trago os princípios poderosos por tras dela pra voce aumentar suas vendas
+                        <p><strong style="color: #3E2723;">Um Script de Abordagem simples</strong>, que dura cerca de 75
+                            segundos, pra você pegar, adaptar pro seu doce e usar no dia a dia pra lucrar Até <strong
+                                style="color: #3E2723;">R$300,00 A Mais</strong> Dentro de 4
+                            Horas, sem parecer vendedor chato.</p>
+                        <p>Abordagem testada e aprimorada durante <strong style="color: #3E2723;">4 anos de vendas de
+                                doces</strong>, seja na rua, em parque e usando com parentes. Serve mesmo para
+                            tímidos.</p>
+                        <p>Além da abordagem, trago os princípios poderosos por trás dela pra você aumentar suas vendas
                             com mais facilidade e confiança.</p>
                     </div>
                 </details>
                 <details>
                     <summary>O que está incluso na Abordagem de 75s?</summary>
                     <div class="faq-content">
-                        <p>Você recebe:<br>
-                            <span class="text-bold">A Abordagem de 75 Segundos +</span> Todos os 6 bônus inclusos.
-                        </p>
+                        <p>Você recebe:</p>
+                        <p><strong style="color: #3E2723;">A Abordagem de 75 Segundos +</strong> Todos os 6 bônus
+                            inclusos.</p>
                     </div>
                 </details>
 
                 <details>
                     <summary>Porque está tão barato?</summary>
                     <div class="faq-content">
-                        <p>Porque essa não é uma “grande formação em vendas”.<br>
-                            É um <span class="text-bold">atalho rápido e prático.</span><br>
-                            Esse valor de <span class="text-green">R$ 29,90</span> é especial de Pré Lançamento,<br>
-                            Quando acabar o cronometro, ou assim que voce sair dessa pagina, irei fechar as vagas.</p>
-                        <p>E assim:<br>
-                            Você irá ver resultados,<br>
-                            irei encher essa abordagem depoimentos;<br>
-                            e depois disso, sim, fazer o lançamento oficial no valor de 97,00 reais.<br>
-                            Enquanto isso não acontece, quem entra agora pega <span class="text-bold">esse valor
-                                inical</span></p>
+                        <p>Porque essa não é uma “grande formação em vendas”. É um <strong
+                                style="color: #3E2723;">atalho rápido e prático.</strong></p>
+                        <p>Esse valor de <strong style="color: #3E2723;">R$ 29,90</strong> é especial de Pré Lançamento.
+                            Quando acabar o cronometro, ou assim que você sair dessa página, irei fechar as vagas.</p>
+                        <p>E assim:</p>
+                        <p>Você irá ver resultados,</p>
+                        <p>Irei encher essa abordagem de depoimentos;</p>
+                        <p>E depois disso, sim, fazer o lançamento oficial no valor de 97,00 reais.</p>
+                        <p>Enquanto isso não acontece, quem entra agora pega <strong style="color: #3E2723;">esse valor
+                                inicial.</strong></p>
                     </div>
                 </details>
 
                 <details>
                     <summary>Funciona se eu nunca vendi na rua?</summary>
                     <div class="faq-content">
-                        <p>Sim.<br>
-                            O script foi pensado pra dois tipos de pessoa:<br>
-                            quem já vende doces, mas volta pra casa com coisa sobrando;<br>
-                            e quem nunca vendeu nada, mas quer começar com o passo a passo certo.<br>
-                            Eu explico como abordar desde o “primeiro oi”, então você não precisa ter experiência
+                        <p>Sim.</p>
+                        <p>O script foi pensado pra dois tipos de pessoa:</p>
+                        <p>Quem já vende doces, mas volta pra casa com coisa sobrando;</p>
+                        <p>E quem nunca vendeu nada, mas quer começar com o <strong style="color: #3E2723;">passo a
+                                passo certo.</strong></p>
+                        <p>Eu explico como abordar desde o “primeiro oi”, então você não precisa ter experiência
                             anterior em vendas.</p>
                     </div>
                 </details>
@@ -1397,27 +1414,26 @@
                 <details>
                     <summary>Serve pra outros produtos além de doces?</summary>
                     <div class="faq-content">
-                        <p>Serve, sim.<br>
-                            A Abordagem de 75 Segundos foi criada pensando em doces, mas a lógica funciona muito bem
-                            pra:<br>
-                            água,<br>
-                            salgado,<br>
-                            chocolate,<br>
-                            qualquer coisa que você venda na rua ou de mesa em mesa.<br>
-                            Você só troca o nome do produto e ajusta as frases.<br>
-                            Mas se o seu foco é doce, vai cair como uma luva.</p>
+                        <p>Serve, sim.</p>
+                        <p>A Abordagem de 75 Segundos foi criada pensando em doces, mas a lógica funciona muito bem
+                            pra:</p>
+                        <p>Água, salgado, chocolate, qualquer coisa que você venda na rua ou de mesa em mesa.</p>
+                        <p>Você só troca o nome do produto e ajusta as frases.</p>
+                        <p>Mas se o seu foco é doce, <strong style="color: #3E2723;">vai cair como uma luva.</strong>
+                        </p>
                     </div>
                 </details>
 
                 <details>
                     <summary>Em quanto tempo posso notar diferença?</summary>
                     <div class="faq-content">
-                        <p>Se você aplicar de verdade o script, quando voce sair pra vender já vai sentir diferença:<br>
-                            mais gente querendo ouvir o que você tem pra falar porque chamou atenção,</p>
-                        <p>Está ganhando confiança e naturalidade nas abordagens.<br>
-                            e ouvindo mais “SIM, vou querer esse sabor” pros seus doces de forma surpreendente.<br>
-                            Muita gente consegue vender mais já no primeiro dia aplicando a abordagem completa.<br>
-                            Mas o jogo fica ainda melhor quando você usa por dias seguidos e vai pegando mais confiança.
+                        <p>Se você aplicar de verdade o script, quando você sair pra vender já vai sentir diferença:</p>
+                        <p>Mais gente querendo ouvir o que você tem pra falar porque chamou atenção,</p>
+                        <p>Está ganhando confiança e naturalidade nas abordagens.</p>
+                        <p>E ouvindo mais “SIM, vou querer esse sabor” pros seus doces de forma surpreendente.</p>
+                        <p>Muita gente consegue vender mais já no <strong style="color: #3E2723;">primeiro dia</strong>
+                            aplicando a abordagem completa.</p>
+                        <p>Mas o jogo fica ainda melhor quando você usa por dias seguidos e vai pegando mais confiança.
                         </p>
                     </div>
                 </details>
@@ -1425,16 +1441,15 @@
                 <details>
                     <summary>Preciso ser extrovertido?</summary>
                     <div class="faq-content">
-                        <p>Não.<br>
-                            Esse guia foi feito justamente pra quem:<br>
-                            tem vergonha,<br>
-                            fala baixinho,<br>
-                            acha que “não nasceu pra vendas”.<br>
-                            Você não precisa virar “vendedor falante”.<br>
-                            Você só precisa de um roteiro simples na cabeça pra não travar e assim ter mais pessoas
-                            valorizando seus doces.<br>
-                            A Abordagem de 75 Segundos é isso:<br>
-                            uma abordagem pra tímido conseguir se comunicar e vender sem se humilhar, sem forçar e sem
+                        <p>Não.</p>
+                        <p>Esse guia foi feito justamente pra quem: tem vergonha, fala baixinho, acha que “não nasceu
+                            pra vendas”.</p>
+                        <p>Você não precisa virar “vendedor falante”.</p>
+                        <p>Você só precisa de um <strong style="color: #3E2723;">roteiro simples na cabeça</strong> pra
+                            não travar e assim ter mais pessoas
+                            valorizando seus doces.</p>
+                        <p>A Abordagem de 75 Segundos é isso:</p>
+                        <p>Uma abordagem pra tímido conseguir se comunicar e vender sem se humilhar, sem forçar e sem
                             ser chato.</p>
                     </div>
                 </details>
@@ -1442,27 +1457,29 @@
                 <details>
                     <summary>E se eu não gostar do material?</summary>
                     <div class="faq-content">
-                        <p>Você tem 14 dias pra experimentar sem risco.Se dentro desse periodo não lucrar no min 100
-                            reais a mais, você tem direito a pedir o reembolso dentro da área de membros.</p>
+                        <p>Você tem 14 dias pra experimentar sem risco.</p>
+                        <p>Se dentro desse período não lucrar no min <strong style="color: #3E2723;">100 reais a
+                                mais</strong>, você tem direito a pedir o reembolso dentro da área de membros.</p>
                     </div>
                 </details>
 
                 <details>
                     <summary>Como recebo o material após a compra?</summary>
                     <div class="faq-content">
-                        <p>Depois que o pagamento for aprovado:<br>
-                            você recebe um e-mail com o link de acesso/baixar o guia e os bônus;<br>
-                            pode abrir tudo direto no celular, computador ou tablet.<br>
-                            Se o e-mail não chegar em alguns minutos:<br>
-                            dá uma olhada na pasta de spam/lixo eletrônico,<br>
-                            e, se mesmo assim não achar, é só me chamar no suporte que eu te ajudo a acessar.</p>
+                        <p>Depois que o pagamento for aprovado:</p>
+                        <p>Você recebe um e-mail com o link de acesso/baixar o guia e os bônus; pode abrir tudo direto
+                            no celular, computador ou tablet.</p>
+                        <p>Se o e-mail não chegar em alguns minutos:</p>
+                        <p>Dá uma olhada na pasta de spam/lixo eletrônico, e, se mesmo assim não achar, é só me chamar
+                            no suporte que eu te ajudo a acessar.</p>
                     </div>
                 </details>
 
                 <details>
                     <summary>Vou ter acesso por quanto tempo?</summary>
                     <div class="faq-content">
-                        <p>Você tem acesso pra sempre ao material, em um único pagamento.</p>
+                        <p>Você tem acesso <strong style="color: #3E2723;">pra sempre</strong> ao material, em um único
+                            pagamento.</p>
                     </div>
                 </details>
             </div>
