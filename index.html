@@ -410,7 +410,8 @@
             padding: 1rem;
             overflow: hidden;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05)
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            min-height: 20px
         }
 
         details[open] {
@@ -563,8 +564,6 @@
             background: #333
         }
 
-        /* MEDIA QUERIES */
-
         @media(min-width:900px) {
             .grid-2 {
                 grid-template-columns: 1fr 1fr
@@ -620,15 +619,13 @@
         }
 
         @media(max-width:768px) {
-
-            /* Mais espaço lateral no mobile */
             .container {
-                padding: 0 1rem;
+                padding: 0 1rem
             }
 
             .hero-card {
                 padding-left: 0.5rem !important;
-                padding-right: 0.5rem !important;
+                padding-right: 0.5rem !important
             }
 
             .hero-card h1 {
@@ -636,7 +633,7 @@
                 max-width: 100% !important;
                 margin: 0 auto;
                 line-height: 1.5;
-                letter-spacing: normal;
+                letter-spacing: normal
             }
 
             .hero-card p {
@@ -652,26 +649,31 @@
 
             .bonus-item {
                 margin-bottom: 2rem !important;
-                padding: 2rem !important;
+                padding: 2rem !important
             }
 
             .bonus-item p {
                 line-height: 1.7 !important;
-                margin-top: 1rem !important;
+                margin-top: 1rem !important
             }
 
             p {
-                line-height: 1.75 !important;
+                line-height: 1.75 !important
             }
 
             .urgency-block {
-                display: none !important;
+                display: none !important
             }
         }
 
         .subheadline-emphasis {
             font-weight: 700;
-            font-size: 1.1em;
+            font-size: 1.1em
+        }
+
+        .countdown-timer {
+            min-height: 35px;
+            display: inline-block
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1500,124 +1502,8 @@
         <p>© 2024 Pobre Esperto. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var duration = 19 * 60 + 29;
+    <script src="script.js" defer></script>
 
-            // Selecionar todos os elementos que devem mostrar o cronômetro
-            // Vamos adicionar a classe 'countdown-timer' no HTML
-            var displayElements = document.querySelectorAll('.countdown-timer');
-
-            startTimer(duration, displayElements);
-
-            // Carousel Logic
-            // Generic Carousel Logic for Multiple Carousels
-            const carouselContainers = document.querySelectorAll('.carousel-container');
-
-            carouselContainers.forEach(container => {
-                const track = container.querySelector('.carousel-track');
-                if (!track) return;
-
-                const slides = Array.from(track.children);
-                const nextButton = container.querySelector('.carousel-button--right');
-                const prevButton = container.querySelector('.carousel-button--left');
-                const dotsNav = container.querySelector('.carousel-nav');
-                const dots = Array.from(dotsNav.children);
-
-                // Current state per carousel
-                let currentSlideIndex = 0;
-
-                const updateSlidePosition = (index) => {
-                    const width = track.getBoundingClientRect().width;
-                    track.style.transform = 'translateX(-' + (width * index) + 'px)';
-
-                    slides.forEach(slide => slide.classList.remove('current-slide'));
-                    slides[index].classList.add('current-slide');
-
-                    dots.forEach(dot => dot.classList.remove('current-slide'));
-                    dots[index].classList.add('current-slide');
-                };
-
-                // Button Listeners
-                nextButton.addEventListener('click', () => {
-                    currentSlideIndex++;
-                    if (currentSlideIndex >= slides.length) {
-                        currentSlideIndex = 0; // Loop back
-                    }
-                    updateSlidePosition(currentSlideIndex);
-                });
-
-                prevButton.addEventListener('click', () => {
-                    currentSlideIndex--;
-                    if (currentSlideIndex < 0) {
-                        currentSlideIndex = slides.length - 1; // Loop to end
-                    }
-                    updateSlidePosition(currentSlideIndex);
-                });
-
-                // Dot Listeners
-                dotsNav.addEventListener('click', e => {
-                    const targetDot = e.target.closest('button');
-                    if (!targetDot) return;
-
-                    const targetIndex = dots.findIndex(dot => dot === targetDot);
-                    currentSlideIndex = targetIndex;
-                    updateSlidePosition(currentSlideIndex);
-                });
-
-                // Window resize adjustment specific to this carousel
-                window.addEventListener('resize', () => {
-                    updateSlidePosition(currentSlideIndex);
-                });
-
-                // Touch / Swipe Support
-                let touchStartX = 0;
-                let touchEndX = 0;
-
-                track.addEventListener('touchstart', e => {
-                    touchStartX = e.changedTouches[0].screenX;
-                }, { passive: true });
-
-                track.addEventListener('touchend', e => {
-                    touchEndX = e.changedTouches[0].screenX;
-                    handleGesture();
-                }, { passive: true });
-
-                const handleGesture = () => {
-                    if (touchEndX < touchStartX - 50) {
-                        // Swipe Left -> Next Slide
-                        nextButton.click();
-                    }
-                    if (touchEndX > touchStartX + 50) {
-                        // Swipe Right -> Prev Slide
-                        prevButton.click();
-                    }
-                };
-            });
-        });
-
-        function startTimer(duration, displayElements) {
-            var timer = duration, minutes, seconds;
-
-            // Atualizar a cada 1 segundo
-            setInterval(function () {
-                minutes = parseInt(timer / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                displayElements.forEach(function (element) {
-                    element.textContent = minutes + ":" + seconds;
-                });
-
-                if (--timer < 0) {
-                    timer = 0;
-                    // Opcional: Ação quando acabar (ex: reiniciar ou parar em 00:00)
-                }
-            }, 1000);
-        }
-    </script>
     <script>
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     </script>
