@@ -719,9 +719,7 @@
                     O Script Testado em 4 Anos de Rua Que Transforma a Rejeição do 'Não, Obrigado' em <span
                         class="text-bold">'Me Dá Dois Desse Sabor'</span> Sem Ser Insistente
                 </p>
-                <p class="hero-subheadline" style="font-size: 1.15rem; margin-top: -1.5rem; margin-bottom: 2.5rem;">
-                    Restaure o orgulho que sua familia merece ver em você como provedor(a) de casa.
-                </p>
+
 
 
 
@@ -738,35 +736,100 @@
     <!-- DORES (PAIN POINTS) -->
     <section id="pain-section" class="bg-white">
         <style>
+            .pain-divider {
+                display: none;
+            }
+
             @media (max-width: 768px) {
-                #pain-section .check-list li {
-                    margin-bottom: 2rem;
-                    /* Increased spacing on mobile */
+
+                /* MASTER CARD: Keep existing .card structure but ensure spacing */
+                #pain-section .card {
+                    padding: 2rem 1.5rem !important;
+                    /* Slightly reduced padding on mobile for better fit */
                 }
 
-                #pain-section p {
-                    margin-top: 2rem !important;
-                    /* Increased spacing on mobile */
+                /* TITLE */
+                #pain-section h2 {
+                    margin-bottom: 1rem !important;
+                }
+
+                /* SHORT DIVIDER */
+                .pain-divider {
+                    display: block;
+                    width: 50px;
+                    height: 4px;
+                    background-color: var(--green-cta);
+                    /* Green check color */
+                    margin: 0 auto 2rem auto;
+                    /* Centered with bottom margin */
+                    border-radius: 2px;
+                }
+
+                /* MINI-CARDS (List Items) */
+                #pain-section .check-list li {
+                    background-color: #F5F5F5;
+                    /* Neutral light gray */
+                    padding: 1.5rem 1.5rem 1.5rem 3.5rem !important;
+                    /* Comfortable padding, space for icon */
+                    border-radius: 12px;
                     margin-bottom: 2rem !important;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+                    /* Subtle shadow */
+                }
+
+                /* Positioning the check icon inside the padding */
+                #pain-section .check-list li::before {
+                    left: 1.5rem !important;
+                    /* Align with text start */
+                    top: 1.5rem !important;
+                    /* Align with text start */
+                }
+
+                /* FINAL CARD (Block below divider/list) */
+                .pain-final-card {
+                    background-color: #F5F5F5;
+                    border-radius: 12px;
+                    padding: 1.5rem !important;
+                    margin-top: 2rem;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+                }
+
+                /* Text adjustments nicely inside the card */
+                .pain-final-card p {
+                    margin-bottom: 1.5rem !important;
+                    line-height: 1.6 !important;
+                }
+
+                .pain-final-card p:last-child {
+                    margin-bottom: 0 !important;
                 }
             }
         </style>
         <div class="container">
             <div class="card">
-                <h2 class="text-center" style="color: #3E2723;">POR ACASO VOCÊ…</h2>
+                <h2 class="text-center" style="color: #3E2723;">VOCÊ SE IDENTIFICA?</h2>
+
+                <!-- Short Divider for Mobile -->
+                <div class="pain-divider"></div>
+
                 <ul class="check-list">
                     <li>Tem medo de abordar desconhecidos na rua e se sente incapaz?</li>
                     <li>Sente seu alcance e renda limitado por não saber abordar novos clientes?</li>
                     <li>Depende de pedidos esporádicos de conhecidos em vez de ter renda previsíveis com os doce?</li>
                     <li>As vezes desanima do sonho de vender doces, e até pensa em desistir?</li>
                 </ul>
-                <p class="text-center" style="margin-top: 1.5rem; font-weight: 500;">
-                    Se sim, <strong style="color: #3E2723;">o problema não é você ou incompetência.</strong>
-                </p>
-                <p class="text-center" style="font-weight: 500;">
-                    É falta de um roteiro <br><strong style="color: #3E2723;">seguro que te dá clareza e confiança do
-                        que falar nos PRIMEIROS SEGUNDOS.</strong>
-                </p>
+
+                <!-- Mobile 'Final Card' Container -->
+                <div class="pain-final-card">
+                    <p class="text-center" style="margin-top: 1.5rem; font-weight: 500;">
+                        Se sim, <strong style="color: #3E2723;">o problema não é você ou incompetência.</strong>
+                    </p>
+                    <p class="text-center" style="font-weight: 500;">
+                        É falta de um roteiro <br><strong style="color: #3E2723;">seguro que te dá clareza e confiança
+                            do
+                            que falar nos PRIMEIROS SEGUNDOS.</strong>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -781,7 +844,7 @@
     <section class="bg-cream">
         <div class="container text-center">
             <div class="card">
-                <h2 style="color: #3E2723; text-transform: uppercase;">NÃO É TALENTO PRA VENDER. É TÉCNICA</h2>
+                <h2 style="color: #3E2723; text-transform: uppercase;">NÃO É TALENTO PRA VENDER</h2>
                 <p style="color: #3E2723; margin-bottom: 0;">
                     Nos últimos 4 anos vendendo doces na rua, descobri que <strong style="color: #3E2723;">75 segundos
                         de abordagem certa</strong> transformam um <strong style="color: #D32F2F;">'não
@@ -790,7 +853,71 @@
             </div>
         </div>
     </section>
-    <section id="how-it-works-section" style="background-color: var(--green-cta); padding: 3rem 0;">
+    <!-- DEPOIMENTOS CARROUSEL MOVIDO (PATCH 02) -->
+    <section class="bg-green">
+        <div class="container text-center">
+            <h2>MEUS RESULTADOS USANDO ESSA ABORDAGEM...</h2>
+            <p style="font-style: italic; color: #FFF; margin-bottom: 2rem;">arraste pro lado</p>
+
+            <div class="carousel-container">
+                <button class="carousel-button carousel-button--left">◀</button>
+
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide current-slide">
+                            <img class="carousel-image" src="assets/depo2.jpg" alt="Depoimento 1" loading="lazy"
+                                decoding="async" width="400" height="600">
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-image" src="assets/gab_doc_1_whatsapp.jpg" alt="Depoimento 2"
+                                loading="lazy" decoding="async" width="400" height="800">
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-image" src="assets/gab_doc_pacotes_final.jpg" alt="Depoimento 3"
+                                loading="lazy" decoding="async" width="600" height="800">
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="carousel-button carousel-button--right">▶</button>
+
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-slide"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                </div>
+            </div>
+
+            <!-- VIDEO TESTIMONIAL CARD -->
+            <div class="card testimonial-video-container"
+                style="max-width: 800px; margin: 2rem auto; padding: 2rem; background: #FFFFFF; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                <script src="https://fast.wistia.com/player.js" async></script>
+                <script src="https://fast.wistia.com/embed/78pysg1rlc.js" async type="module"></script>
+                <style>
+                    wistia-player[media-id='78pysg1rlc']:not(:defined) {
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/78pysg1rlc/swatch');
+                        display: block;
+                        filter: blur(5px);
+                        padding-top: 100.0%;
+                    }
+                </style> <wistia-player media-id="78pysg1rlc" aspect="1.0"></wistia-player>
+
+                <div class="video-spacer" style="margin-top: 2rem;"></div> <!-- Spacer -->
+
+                <!-- NOVO VÍDEO -->
+                <script src="https://fast.wistia.com/embed/xddsqlbs0w.js" async type="module"></script>
+                <style>
+                    wistia-player[media-id='xddsqlbs0w']:not(:defined) {
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/xddsqlbs0w/swatch');
+                        display: block;
+                        filter: blur(5px);
+                        padding-top: 177.78%;
+                    }
+                </style> <wistia-player media-id="xddsqlbs0w" aspect="0.5625"></wistia-player>
+            </div>
+        </div>
+    </section>
+    <section id="how-it-works-section" style="background-color: #FFFFFF; padding: 3rem 0;">
         <style>
             @media (max-width: 768px) {
                 #how-it-works-section {
@@ -805,9 +932,9 @@
                     ABORDAGEM AÍ FUNCIONA?</h2>
 
                 <div style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem auto;">
-                    <p style="margin-bottom: 1.5rem;">Funciona assim: você usa as <strong
-                            style="color: #3E2723; text-decoration: underline;">Frases da Conexão Instantânea</strong>
-                        que fazem você ser percebido como um <strong style="color: #3E2723;">conhecido puxando conversa
+                    <p style="margin-bottom: 1.5rem;">Funciona assim: <strong
+                            style="color: #3E2723; text-decoration: underline;">A Abordagem Receptiva</strong> faz você
+                        ser percebido ao cliente como um <strong style="color: #3E2723;">conhecido puxando conversa
                             rápida</strong>, não como vendedor
                         empurrando produto ou pedindo dinheiro.</p>
 
@@ -827,83 +954,292 @@
         <div class="container">
             <h2 class="text-center">O QUE VOCÊ VAI DOMINAR ATRAVÉS DO SCRIPT?</h2>
 
-            <div class="grid-cards">
+            <!-- UNIVERSAL CAROUSEL (Patch 02 Round 3) -->
+            <style>
+                /* Container */
+                .universal-carousel-wrapper {
+                    position: relative;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 1rem;
+                }
 
-                <!-- CARD 1 -->
-                <div class="module-card">
-                    <!-- Icone 1: Conexão (Pessoas + Coração) -->
-                    <div class="card-icon-container">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
-                            <path
-                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                        </svg>
+                /* Scroll Track */
+                .universal-carousel-track {
+                    display: flex;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+                    gap: 1.5rem;
+                    padding-bottom: 2rem;
+                    -webkit-overflow-scrolling: touch;
+                    /* Smooth scroll iOS */
+                    scrollbar-width: none;
+                    /* Firefox */
+                }
+
+                .universal-carousel-track::-webkit-scrollbar {
+                    display: none;
+                    /* Chrome/Safari */
+                }
+
+                /* Cards */
+                .universal-carousel-item {
+                    scroll-snap-align: center;
+                    flex: 0 0 85%;
+                    /* Mobile: 85% width (peek next card) */
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .universal-carousel-item .module-card {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    min-height: 400px;
+                    /* Consistent height */
+                }
+
+                /* Desktop/Tablet Adjustments */
+                @media (min-width: 768px) {
+                    .universal-carousel-item {
+                        flex: 0 0 45%;
+                        /* Tablet/Desktop: ~2 cards visible */
+                        scroll-snap-align: start;
+                    }
+                }
+
+                @media (min-width: 1024px) {
+                    .universal-carousel-item {
+                        flex: 0 0 45%;
+                        /* Desktop: 2 cards visible with peek */
+                    }
+                }
+
+                /* Navigation Arrows */
+                .uc-arrow {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: white;
+                    border: 1px solid #ddd;
+                    color: #3E2723;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    z-index: 10;
+                    font-size: 1.2rem;
+                    user-select: none;
+                    transition: background 0.2s;
+                }
+
+                .uc-arrow:hover {
+                    background: #f0f0f0;
+                }
+
+                .uc-arrow-left {
+                    left: 0;
+                }
+
+                .uc-arrow-right {
+                    right: 0;
+                }
+
+                @media (max-width: 768px) {
+                    .uc-arrow-left {
+                        left: 0;
+                    }
+
+                    .uc-arrow-right {
+                        right: 0;
+                    }
+
+                    .universal-carousel-wrapper {
+                        padding: 0 2.5rem;
+                    }
+
+                    /* Padded container for arrows */
+                }
+
+                /* Dots */
+                .uc-dots {
+                    display: flex;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    margin-top: 1rem;
+                }
+
+                .uc-dot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: #ccc;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0;
+                    transition: transform 0.2s, background 0.2s;
+                }
+
+                .uc-dot.active {
+                    background: #3E2723;
+                    transform: scale(1.2);
+                }
+            </style>
+
+            <div class="universal-carousel-wrapper">
+                <button class="uc-arrow uc-arrow-left" id="uc-prev">◀</button>
+
+                <div class="universal-carousel-track" id="uc-track">
+                    <!-- CARD 1 -->
+                    <div class="universal-carousel-item" data-index="0">
+                        <div class="module-card">
+                            <div class="card-icon-container">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                                    <path
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Arsenal Abre-Portas</h3>
+                            <p>A frase que faz a pessoa parar nos primeiros 5 segundos... em vez de te ignorar ou de te
+                                dizer só 'não, obrigado'.</p>
+                        </div>
                     </div>
-                    <h3 class="card-title">Arsenal Abre-Portas</h3>
 
-                    <p>A frase que faz a pessoa parar nos primeiros 5 segundos... em vez de te ignorar ou de te dizer só
-                        'não, obrigado'.</p>
+                    <!-- CARD 2 -->
+                    <div class="universal-carousel-item" data-index="1">
+                        <div class="module-card">
+                            <div class="card-icon-container">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                                    <path
+                                        d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Conexão Doce Instantânea</h3>
+                            <p>Como criar conexão em 15 segundos, fazendo você parecer uma pessoa conhecida oferecendo
+                                algo gostoso.</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="universal-carousel-item" data-index="2">
+                        <div class="module-card">
+                            <div class="card-icon-container">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                                    <path
+                                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Experiência em 3D</h3>
+                            <p>Momento de Você Transformar seu doce em rápida experiência viva na mente do cliente, de
+                                forma que ele <strong class="text-bold">veja valor no seu doce</strong>, sem forçar
+                                nada.</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="universal-carousel-item" data-index="3">
+                        <div class="module-card">
+                            <div class="card-icon-container">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                                    <path
+                                        d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Multiplicador de Bandeja</h3>
+                            <p>Aprenda a Aumentar a venda de R$10 para R$30-60 por cliente sem empurrar</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="universal-carousel-item" data-index="4">
+                        <div class="module-card">
+                            <!-- Icone 5: Fechamento (Handshake/Check) -->
+                            <div class="card-icon-container">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Fechamento Açucarado</h3>
+                            <p>Palavra por Palavra para você Passar o preço sem medo e transformar interesse em dinheiro
+                                na mão</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- CARD 2 -->
-                <div class="module-card">
-                    <!-- Icone 2: Pergunta (?) -->
-                    <div class="card-icon-container">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
-                            <path
-                                d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z" />
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Conexão Doce Instantânea</h3>
-
-                    <p>Como criar conexão em 15 segundos, fazendo você parecer uma pessoa conhecida oferecendo algo
-                        gostoso.</p>
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="module-card">
-                    <!-- Icone 3: Experiencia 3D (Estrela/Brilho) -->
-                    <div class="card-icon-container">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
-                            <path
-                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z" />
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Experiência em 3D</h3>
-
-                    <p>Momento de Você Transformar seu doce em rápida experiência viva na mente do cliente, de forma que
-                        ele <strong class="text-bold">veja valor no seu doce</strong>, sem forçar nada.</p>
-                </div>
-
-                <!-- CARD 4 -->
-                <div class="module-card">
-                    <!-- Icone 4: Multiplicador (Layers/Bandeja) -->
-                    <div class="card-icon-container">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
-                            <path
-                                d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z" />
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Multiplicador de Bandeja</h3>
-
-                    <p>Aprenda a Aumentar a venda de R$10 para R$30-60 por cliente sem empurrar</p>
-                </div>
-
-                <!-- CARD 5 -->
-                <div class="module-card">
-                    <!-- Icone 5: Fechamento (Handshake/Check) -->
-                    <div class="card-icon-container">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Fechamento Açucarado</h3>
-
-                    <p>Palavra por Palavra para você Passar o preço sem medo e transformar interesse em dinheiro na mão
-                    </p>
-
-                </div>
-
+                <button class="uc-arrow uc-arrow-right" id="uc-next">▶</button>
             </div>
+
+            <div class="uc-dots" id="uc-dots">
+                <button class="uc-dot active" data-index="0" aria-label="Slide 1"></button>
+                <button class="uc-dot" data-index="1" aria-label="Slide 2"></button>
+                <button class="uc-dot" data-index="2" aria-label="Slide 3"></button>
+                <button class="uc-dot" data-index="3" aria-label="Slide 4"></button>
+                <button class="uc-dot" data-index="4" aria-label="Slide 5"></button>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const track = document.getElementById('uc-track');
+                    const leftBtn = document.getElementById('uc-prev');
+                    const rightBtn = document.getElementById('uc-next');
+                    const dots = document.querySelectorAll('.uc-dot');
+                    let isScrolling = false;
+
+                    // Scroll By Item Width
+                    const getScrollAmount = () => {
+                        const item = track.querySelector('.universal-carousel-item');
+                        // Calculate width including gap (approximate or get computed)
+                        return item.offsetWidth + 24; // 24px is gap: 1.5rem
+                    };
+
+                    leftBtn.addEventListener('click', () => {
+                        track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+                    });
+
+                    rightBtn.addEventListener('click', () => {
+                        track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+                    });
+
+                    // Dot Click
+                    dots.forEach(dot => {
+                        dot.addEventListener('click', () => {
+                            const index = dot.getAttribute('data-index');
+                            const target = track.querySelector(`.universal-carousel-item[data-index="${index}"]`);
+                            if (target) {
+                                // Scroll into view centered
+                                const trackRect = track.getBoundingClientRect();
+                                const targetRect = target.getBoundingClientRect();
+                                const offset = target.offsetLeft - track.offsetLeft - (track.offsetWidth - target.offsetWidth) / 2;
+                                track.scrollTo({ left: offset, behavior: 'smooth' });
+                            }
+                        });
+                    });
+
+                    // Active Dot Logic via IntersectionObserver
+                    const observerOptions = {
+                        root: track,
+                        threshold: 0.5 // If 50% is visible
+                    };
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const index = entry.target.getAttribute('data-index');
+                                // Update dots
+                                dots.forEach(d => d.classList.remove('active'));
+                                if (dots[index]) dots[index].classList.add('active');
+                            }
+                        });
+                    }, observerOptions);
+
+                    document.querySelectorAll('.universal-carousel-item').forEach(item => observer.observe(item));
+                });
+            </script>
 
             <div class="text-center" style="margin-top: 3rem;">
                 <p style="font-size: 1.1rem;">Tudo dentro da <span class="text-bold">Abordagem Receptiva</span> de
@@ -1064,69 +1400,7 @@
 
     <!-- DEPOIMENTOS -->
     <!-- DEPOIMENTOS CARROUSEL -->
-    <section class="bg-green">
-        <div class="container text-center">
-            <h2>MEUS RESULTADOS USANDO ESSA ABORDAGEM...</h2>
-            <p style="font-style: italic; color: #FFF; margin-bottom: 2rem;">arraste pro lado</p>
-
-            <div class="carousel-container">
-                <button class="carousel-button carousel-button--left">◀</button>
-
-                <div class="carousel-track-container">
-                    <ul class="carousel-track">
-                        <li class="carousel-slide current-slide">
-                            <img class="carousel-image" src="assets/depo2.jpg" alt="Depoimento 1" loading="lazy"
-                                decoding="async" width="400" height="600">
-                        </li>
-                        <li class="carousel-slide">
-                            <img class="carousel-image" src="assets/gab_doc_1_whatsapp.jpg" alt="Depoimento 2"
-                                loading="lazy" decoding="async" width="400" height="800">
-                        </li>
-                        <li class="carousel-slide">
-                            <img class="carousel-image" src="assets/gab_doc_pacotes_final.jpg" alt="Depoimento 3"
-                                loading="lazy" decoding="async" width="600" height="800">
-                        </li>
-                    </ul>
-                </div>
-
-                <button class="carousel-button carousel-button--right">▶</button>
-
-                <div class="carousel-nav">
-                    <button class="carousel-indicator current-slide"></button>
-                    <button class="carousel-indicator"></button>
-                    <button class="carousel-indicator"></button>
-                </div>
-            </div>
-
-            <!-- VIDEO TESTIMONIAL CARD -->
-            <div class="card testimonial-video-container"
-                style="max-width: 800px; margin: 2rem auto; padding: 2rem; background: #FFFFFF; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-                <script src="https://fast.wistia.com/player.js" async></script>
-                <script src="https://fast.wistia.com/embed/78pysg1rlc.js" async type="module"></script>
-                <style>
-                    wistia-player[media-id='78pysg1rlc']:not(:defined) {
-                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/78pysg1rlc/swatch');
-                        display: block;
-                        filter: blur(5px);
-                        padding-top: 100.0%;
-                    }
-                </style> <wistia-player media-id="78pysg1rlc" aspect="1.0"></wistia-player>
-
-                <div class="video-spacer" style="margin-top: 2rem;"></div> <!-- Spacer -->
-
-                <!-- NOVO VÍDEO -->
-                <script src="https://fast.wistia.com/embed/xddsqlbs0w.js" async type="module"></script>
-                <style>
-                    wistia-player[media-id='xddsqlbs0w']:not(:defined) {
-                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/xddsqlbs0w/swatch');
-                        display: block;
-                        filter: blur(5px);
-                        padding-top: 177.78%;
-                    }
-                </style> <wistia-player media-id="xddsqlbs0w" aspect="0.5625"></wistia-player>
-            </div>
-        </div>
-    </section>
+    <!-- DEPOIMENTOS CARROUSEL REMOVIDO DAQUI -->
 
     <!-- OFERTA PRICE -->
     <section id="oferta" class="bg-white">
